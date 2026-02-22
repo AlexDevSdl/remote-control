@@ -13,3 +13,7 @@ app.add_middleware(
 )
 
 app.include_router(websocket.router)
+
+@app.get("/")
+async def root():
+    return {"status": "ok"}
